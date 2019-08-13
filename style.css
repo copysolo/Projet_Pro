@@ -1,0 +1,222 @@
+/**
+    Hors_v1 by CopySolo
+    copysolo.fr | @Solomd1x
+    Free for personal and commercial use under the CCA 3.0 license (copysolo.fr)
+**/
+
+
+/****GENERAL****/
+
+body{
+    font-family: 'Century Gothic' , Calibri, serif;
+    font-size: 13px;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+}
+
+header{
+    height: 100px;
+}
+
+footer{
+    height: 80px;
+    padding-top : 30px;
+    text-align: center;
+    background-color: #C5C5C5;
+    border-top: 2px solid #AAA ;
+}
+
+
+
+nav li{ /**Polices**/
+    list-style-type: none;
+    float: left;
+}
+nav ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav{
+    width: 100%;
+    background-color: #424558;
+}
+
+nav a{
+    color: aliceblue;
+    display: inline-block;
+    text-decoration: none;
+    padding: 20px 30px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.table{
+    display: table;
+    margin: 0 auto;
+}
+
+.menu-ind:hover{
+    border-top: 5px solid #4c8;
+    background-color: RGBa(64, 200, 130, 0.15);
+}
+
+.menu-exp:hover{
+    border-top: 5px solid #f1dc4f;
+    background-color: RGBa(241, 211, 79, 0.15);
+}
+
+.menu-hob:hover{
+    border-top: 5px solid #0070bb;
+    background-color: RGBa(000, 112, 192, 0.15);
+}
+
+.menu-con:hover{
+    border-top: 5px solid #e44d26;
+    background-color: RGBa(228, 77, 38, 0.15);
+}
+
+nav li:hover a{
+    padding: 15px 30px 20px 30px;
+}
+
+/**Aspect responsive du site**/
+@media screen and (max-width: 780px){
+    header{
+        height: 50px;
+    }
+    h1{
+        font-size: 28px;
+        margin: 20px 0px 0px 0px;
+    }
+    nav li a{
+        font-size: 12px;
+        padding : 10px;
+    }
+    nav li:hover a{
+        padding : 5px 10px 10px 10px;
+    }
+}
+
+/**Mise en forme CSS de notre page index.html**/
+section{
+    width: 100%;
+    min-height: 300px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.sec{
+    margin: 0px 10%;
+}
+
+/**nous allons faire flotter tous ces "div" afin que les contenus se placent côte à côte**/
+.left{
+    float: left;
+    width: 30%;
+}
+.right{
+    float: left;
+    width: 70%;
+}
+/**On applique un width : 50% aux div qui coupent la section en deux et à nouveau 50%
+**pour les div qui recoupent en deux**/
+.cleft, .cright, .sousleft, .sousright{
+    width: 50%;
+    float: left;
+}
+/**nos div de section contiennent des enfants flottants
+**or en CSS, tout parent non flottant qui possède des enfants flottans va collapser.
+**Pour empecher ce comportement, nous allons utiliser le clearfix CSS suivant sur le div parent**/
+.sec::after, .exp::after, .reco::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/**Ajouter de la couleur et des délimiteurs.**/
+#presentation{
+    border-top: 5px solid #0070bb;
+    background-color: RGBa(64, 200, 130, 0.15);
+}
+
+#parcours{
+    border-top: 5px solid #f1c4;
+    background-color: RGBa(241, 211, 79, 0.15);
+}
+
+#competences{
+    border-top: 5px solid #000077;
+    background-color: RGBa(000, 112, 192, 0.15);
+}
+
+#recommandation{
+    border-top: 5px solid #e44d26;
+    background-color: RGBa(228, 77, 38, 0.15);
+}
+
+
+/**Page 2 Experiences**/
+.orange{
+    border-top: 5px solid #e47d25;
+    background-color: RGBa(228, 117, 38, 0.15);
+    margin-bottom: 0px;
+}
+
+.rose{
+    border-top: 5px solid #e44d96;
+    background-color: RGBa(228, 77, 128, 0.15);
+    margin-bottom: 0px;
+}
+
+.leftexp{
+    width: 45%;
+    float: left;
+}
+
+.rightexp{
+    width: 50%;
+    float: left;
+    margin-left: 5%
+}
+
+.leftexp img{
+    width: 100%;
+    max-width: 400px;
+}
+/**Hobbies on reutilise div class sec rightexp leftexp changer le positionnement*/
+.leftexp{
+    width: 45%;
+    float: left;
+}
+.rightexp{
+    width: 50%;
+    float: left;
+    margin-left: 5%
+}
+.leftexp img{
+    width: 100%;
+    max-width: 400px;
+}
+.vert{
+    border-top: 5px solid #5f6;
+    background-color: RGBa(70, 240, 80, 0.15);
+}
+.bleu{
+    border-top: 5px solid #29c;
+    background-color: RGBa(30, 152, 212, 0.15);
+}
+.jaune{
+    border-top: 5px solid #f3e241;
+    background-color: RGBa(240, 225, 69, 0.15);
+}
+/**Page de contact **/
+.rouge{
+    border-top: 5px solid #e44d26;
+    background-color: RGBa(228, 77, 38, 0.15);
+}
